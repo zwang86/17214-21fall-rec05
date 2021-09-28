@@ -1,4 +1,4 @@
-package edu.cmu.cs.cs214.rec04;
+// package edu.cmu.cs.cs214.rec04;
 
 /**
  * DelegationSortedIntList -- a variant of a SortedIntList that keeps
@@ -12,9 +12,9 @@ package edu.cmu.cs.cs214.rec04;
 
 // HINT: Take a look at the UML diagram to see what DelegationSortedIntList
 //       should implement.
-public class DelegationSortedIntList {
+class DelegationSortedIntList {
     // the number of attempted element insertions
-    private int totalAdded;
+    #totalAdded: number = 0
 
     /**
      * Gets the total number of attempted int insertions to the list since it.
@@ -22,9 +22,11 @@ public class DelegationSortedIntList {
      *
      * @return total number of integers added to the list.
      */
-    public int getTotalAdded()
+    getTotalAdded(): number
     {
-        return totalAdded;
+        return this.#totalAdded
     }
 
 }
+
+export { DelegationSortedIntList }

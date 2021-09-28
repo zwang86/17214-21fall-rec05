@@ -1,4 +1,4 @@
-package edu.cmu.cs.cs214.rec04;
+import { IntegerList } from "./IntegerList";
 
 /**
  * AbstractIntList -- a list of integers.
@@ -6,7 +6,7 @@ package edu.cmu.cs.cs214.rec04;
  * @author Nora Shoemaker
  *
  */
-public abstract class AbstractIntList implements IntegerList {
+abstract class AbstractIntList implements IntegerList {
 
     /**
      * Adds the specified int to the list.
@@ -14,7 +14,7 @@ public abstract class AbstractIntList implements IntegerList {
      * @param num an integer to be added to the list
      * @return true if the list is changed as a result of the call
      */
-    public abstract boolean add(int num);
+     abstract  add( num: number): boolean
 
     /**
      * Adds all of the elements of the IntegerList to the list.
@@ -24,16 +24,16 @@ public abstract class AbstractIntList implements IntegerList {
      * @param list IntegerList containing elements to be added to the list
      * @return true if the list changed as a result of the call
      */
-    public boolean addAll(IntegerList list) {
+    public addAll( list: IntegerList): boolean {
 
-        boolean success = false;
+        let success = false
 
-        for (int i = 0; i < list.size(); i++)
+        for (let i = 0; i < list.size(); i++)
         {
-            success |= this.add(list.get(i));
+            success ||= this.add(list.get(i))
         }
 
-        return success;
+        return success
     }
 
     /**
@@ -42,7 +42,7 @@ public abstract class AbstractIntList implements IntegerList {
      * @param index index of the element to return
      * @return the element at the specified position in this list
      */
-    public abstract int get(int index);
+     abstract  get(index: number):number
 
     /**
      * Removes the first occurrence of the specified element from the list,
@@ -51,7 +51,7 @@ public abstract class AbstractIntList implements IntegerList {
      * @param num an integer to be removed from the list, if present
      * @return true if an element was removed as a result of this call
      */
-    public abstract boolean remove(int num);
+     abstract  remove(num: number):boolean
 
     /**
      * Removes from the list all of its elements that are contained in the
@@ -61,7 +61,7 @@ public abstract class AbstractIntList implements IntegerList {
      * the list
      * @return true if the list changed as a result of the call
      */
-    public abstract boolean removeAll(IntegerList list);
+     abstract  removeAll( list: IntegerList): boolean
 
     /**
      * Returns the number of elements in this list. If this list contains
@@ -69,6 +69,9 @@ public abstract class AbstractIntList implements IntegerList {
      *
      * @return number of elements in the list
      */
-    public abstract int size();
+     abstract size(): number
 
 }
+
+
+export { AbstractIntList }

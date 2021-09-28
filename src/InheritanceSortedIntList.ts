@@ -1,4 +1,5 @@
-package edu.cmu.cs.cs214.rec04;
+import { SortedIntList } from "./hidden/SortedIntListLibrary";
+
 
 /**
  * InheritanceSortedIntList -- a variant of a SortedIntList that keeps
@@ -9,9 +10,9 @@ package edu.cmu.cs.cs214.rec04;
  * @author Nora Shoemaker
  *
  */
-public class InheritanceSortedIntList extends SortedIntList {
+class InheritanceSortedIntList extends SortedIntList {
     // the number of attempted element insertions
-    private int totalAdded;
+    private totalAdded:number = 0
 
     /**
      * Gets the total number of attempted int insertions to the list since it
@@ -19,9 +20,11 @@ public class InheritanceSortedIntList extends SortedIntList {
      *
      * @return total number of integers added to the list.
      */
-    public int getTotalAdded()
+     getTotalAdded(): number
     {
         return this.totalAdded;
     }
 
 }
+
+export {InheritanceSortedIntList}

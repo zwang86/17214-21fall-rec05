@@ -1,4 +1,3 @@
-package edu.cmu.cs.cs214.rec04;
 
 /**
  * IntegerList -- a list of integers.
@@ -6,7 +5,7 @@ package edu.cmu.cs.cs214.rec04;
  * @author Nora Shoemaker
  *
  */
-public interface IntegerList {
+interface IntegerList {
 
     /**
      * Adds the specified int to the list.
@@ -14,7 +13,7 @@ public interface IntegerList {
      * @param num an integer to be added to the list
      * @return true if the list is changed as a result of the call
      */
-    public boolean add(int num);
+     add(num :number):boolean
 
     /**
      * Adds all of the elements of the IntegerList to the list.
@@ -22,7 +21,7 @@ public interface IntegerList {
      * @param list IntegerList containing elements to be added to the list
      * @return true if the list changed as a result of the call
      */
-    public boolean addAll(IntegerList list);
+     addAll( list: IntegerList):boolean
 
     /**
      * Returns the integer at the specified position in this list.
@@ -30,7 +29,7 @@ public interface IntegerList {
      * @param index index of the element to return
      * @return the element at the specified position in this list
      */
-    public int get(int index);
+    get(index: number): number
 
     /**
      * Removes the first occurrence of the specified element from the list,
@@ -39,7 +38,7 @@ public interface IntegerList {
      * @param num an integer to be removed from the list, if present
      * @return true if an element was removed as a result of this call
      */
-    public boolean remove(int num);
+    remove(num:number):boolean
 
     /**
      * Removes from the list all of its elements that are contained in the
@@ -49,7 +48,7 @@ public interface IntegerList {
      * the list
      * @return true if the list changed as a result of the call
      */
-    public boolean removeAll(IntegerList list);
+    removeAll(list: IntegerList):boolean
 
     /**
      * Returns the number of elements in this list. If this list contains
@@ -57,7 +56,9 @@ public interface IntegerList {
      *
      * @return number of elements in the list
      */
-    public int size();
+    size():number
 
 
 }
+
+export { IntegerList }
