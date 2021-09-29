@@ -1,19 +1,6 @@
 import { InheritanceSortedIntList } from "../src/InheritanceSortedIntList";
 import { IntegerList } from "../src/IntegerList";
-
-
-
-/**
- * A helper function that prints out the contents of an IntegerList.
- * @param list IntegerList to be printed out.
- */
- function printList(list: IntegerList) {
-    for (let i = 0; i < list.size(); i++) {
-        console.log(list.get(i));
-        console.log(", ");
-    }
-    console.log();
-}
+import { printList } from "../src/main";
 
 // uncomment the following tests
 

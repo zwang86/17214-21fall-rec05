@@ -1,5 +1,3 @@
-// package edu.cmu.cs.cs214.rec04;
-
 /**
  * DelegationSortedIntList -- a variant of a SortedIntList that keeps
  * count of the number of attempted element insertions (not to be confused

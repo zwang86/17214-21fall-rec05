@@ -40,9 +40,12 @@ console.log(list2.getTotalAdded());
  * @param list IntegerList to be printed out.
  */
 function printList(list: IntegerList) {
+    console.log();
     for (let i = 0; i < list.size(); i++) {
-        console.log(list.get(i));
-        console.log(", ");
+        process.stdout.write(list.get(i).toString());
+        process.stdout.write(", ");
     }
     console.log();
 }
+
+export { printList };
